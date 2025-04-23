@@ -1,0 +1,38 @@
+!-- agendamento.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Horário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Agendar Horário</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+        
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
+
+        <label for="corte">Escolha o Corte:</label>
+<select id="corte" name="corte" required>
+    <option value="corte1">Corte 1</option>
+    <option value="corte2">Corte 2</option>
+    <option value="corte3">Corte 3</option>
+</select>
+        
+        <button type="submit">Confirmar Agendamento</button>
+    </form>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    
+    <!-- Seu script -->
+    <script src="script.js"></script>
+</body>
+</html>
