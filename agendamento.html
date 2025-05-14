@@ -1,38 +1,47 @@
-!-- agendamento.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar Horário</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendar Horário</title>
+  <link rel="stylesheet" href="style.css" />
+  
+
 </head>
 <body>
-    <h1>Agendar Horário</h1>
-    <form>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
-        
-        <label for="data">Data:</label>
-        <input type="date" id="data" name="data" required>
-        
-        <label for="hora">Hora:</label>
-        <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
+    <div class="container">
+  <h1>Agendar Horário</h1>
+  <p id="nomeBarbeiro"></p>
 
-        <label for="corte">Escolha o Corte:</label>
-<select id="corte" name="corte" required>
-    <option value="corte1">Corte 1</option>
-    <option value="corte2">Corte 2</option>
-    <option value="corte3">Corte 3</option>
-</select>
-        
-        <button type="submit">Confirmar Agendamento</button>
-    </form>
+  <form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required />
 
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-    
-    <!-- Seu script -->
-    <script src="script.js"></script>
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required onchange="carregarHorariosDisponiveis()" />
+
+    <label for="hora">Hora:</label>
+    <select id="hora" name="hora" required>
+      <option value="">Selecione a data primeiro</option>
+    </select>
+
+    <label for="corte">Escolha o Corte:</label>
+    <select id="corte" name="corte" required>
+      <option value="corte1 ">Cabelo e barba - R$50</option>
+      <option value="corte2">Cabelo - R$35</option>
+      <option value="corte3">Barba - R$15</option>
+    </select>
+
+    <button type="submit">Confirmar Agendamento</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+
+  <h2>Agendamentos Existentes</h2>
+<div id="agendamentosLista">Carregando...</div>
+
+</div>
 </body>
 </html>

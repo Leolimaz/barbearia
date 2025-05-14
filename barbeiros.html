@@ -3,32 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Barbeiro</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Bem-vindo ao Agendamento do Barbeiro</h1>
-    <p>Agende seu horário com um de nossos profissionais.</p>
-    <a href="barbeiros.html"><button>Agende seu horário</button></a>
-</body>
-</html>
-
-<!-- barbeiros.html -->
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolha seu Barbeiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
     <h1>Escolha seu Barbeiro</h1>
     <p>Selecione um barbeiro para agendar seu horário:</p>
-    <button onclick="location.href='agendamento.html'">João</button>
-    <button onclick="location.href='agendamento.html'">Carlos</button>
-    <button onclick="location.href='agendamento.html'">Pedro</button>
-    <button onclick="location.href='agendamento.html'">Lucas</button>
+    
+    <button onclick="location.href='agendamento.html?barbeiro=João'">João</button>
+    <button onclick="location.href='agendamento.html?barbeiro=Carlos'">Carlos</button>
+    <button onclick="location.href='agendamento.html?barbeiro=Pedro'">Pedro</button>
+    <button onclick="location.href='agendamento.html?barbeiro=Lucas'">Lucas</button>
+</div>
 </body>
 </html>
-
